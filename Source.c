@@ -3,30 +3,44 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <math.h> 
+double s (double s)
+{
+	double area;
+    area = pow(s, 2) * sqrt(3.0); 
+	return area;
+
+}
+double s (double s)
+{
+	double volume;
+	volume = (pow(s, 3) * sqrt(2.0)) / 12;
+	return volume;
+
+}
 int main() {
     
     setlocale(LC_ALL, "Rus");
 
     double s; 
-    double area; // Площадь 
-    double volume; // Объем
+    double area; // ГЏГ«Г®Г№Г Г¤Гј 
+    double volume; // ГЋГЎГєГҐГ¬
 
-    printf("Программа расчета площади и объема правильного тетраэдра\n");
-    printf("Введите длину ребра s: ");
+    printf("ГЏГ°Г®ГЈГ°Г Г¬Г¬Г  Г°Г Г±Г·ГҐГІГ  ГЇГ«Г®Г№Г Г¤ГЁ ГЁ Г®ГЎГєГҐГ¬Г  ГЇГ°Г ГўГЁГ«ГјГ­Г®ГЈГ® ГІГҐГІГ°Г ГЅГ¤Г°Г \n");
+    printf("Г‚ГўГҐГ¤ГЁГІГҐ Г¤Г«ГЁГ­Гі Г°ГҐГЎГ°Г  s: ");
 
     
     scanf("%lf", &s);
    
 
-    area = pow(s, 2) * sqrt(3.0); // pow -  фунция возведение в степень
+    area = pow(s, 2) * sqrt(3.0); // pow -  ГґГіГ­Г¶ГЁГї ГўГ®Г§ГўГҐГ¤ГҐГ­ГЁГҐ Гў Г±ГІГҐГЇГҐГ­Гј
     volume = (pow(s, 3) * sqrt(2.0)) / 12.0;
 
     
-    printf("\nРезультаты расчета:\n");
-    printf("Площадь полной поверхности: %.4lf\n", area);
-    printf("Объем тетраэдра: %.4lf\n", volume);
+    printf("\nГђГҐГ§ГіГ«ГјГІГ ГІГ» Г°Г Г±Г·ГҐГІГ :\n");
+    printf("ГЏГ«Г®Г№Г Г¤Гј ГЇГ®Г«Г­Г®Г© ГЇГ®ГўГҐГ°ГµГ­Г®Г±ГІГЁ: %.4lf\n", area);
+    printf("ГЋГЎГєГҐГ¬ ГІГҐГІГ°Г ГЅГ¤Г°Г : %.4lf\n", volume);
 
-    printf("\nНажмите Enter, чтобы выйти");
+    printf("\nГЌГ Г¦Г¬ГЁГІГҐ Enter, Г·ГІГ®ГЎГ» ГўГ»Г©ГІГЁ");
     getchar();
 
     return 0;
